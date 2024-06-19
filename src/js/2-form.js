@@ -27,8 +27,7 @@ function getValueOfLocalStorage() {
         formData.setData(localData.email, localData.message)
         form.email.value = localData.email;
         form.message.value = localData.message;
-        // formData.email = localData.email;
-        // formData.message = localData.message;
+      
        
         
     }
@@ -42,11 +41,13 @@ function handlerSubmit(event) {
     event.preventDefault()
     if (
         formData.email === "" || formData.message === "") {
-        alert( "Fill please all fields")
+        alert("Fill please all fields")
+        return;
+       
     }
     console.table(formData);
-    localStorage.removeItem(STORAGE_KEY);
     formData.setData("", "");
+    localStorage.removeItem(STORAGE_KEY);
     form.reset();
        
 }
