@@ -41,8 +41,8 @@ function handlerSubmit(event) {
     event.preventDefault()
     if (
         formData.email === "" || formData.message === "") {
-        alert("Fill please all fields")
-        return;
+        return alert("Fill please all fields")
+        
        
     }
     console.table(formData);
@@ -51,3 +51,13 @@ function handlerSubmit(event) {
     form.reset();
        
 }
+function onSubmit(event) {
+  event.preventDefault();
+  if (formData.email === "" || formData.message === "") {
+    return alert("Fill please all fields");
+  }
+  console.table(formData);
+  localStorage.removeItem(STORAGE_KEY);
+  formMessage.reset();
+}
+getValueOfLocalstorage();
