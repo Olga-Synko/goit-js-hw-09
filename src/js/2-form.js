@@ -60,4 +60,4 @@ function onSubmit(event) {
   localStorage.removeItem(STORAGE_KEY);
   formMessage.reset();
 }
-getValueOfLocalstorage();
+getValueOfLocalStorage();
